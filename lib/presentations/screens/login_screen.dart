@@ -6,6 +6,8 @@ import 'package:login_ui/components/custom_textfield.dart';
 import 'package:login_ui/constants/constants.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
@@ -61,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 15,
                     ),
-                    CustomText(text: 'Email', fontSize: 15),
+                    const CustomText(text: 'Email', fontSize: 15),
                     const SizedBox(
                       height: 15,
                     ),
@@ -73,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 15,
                     ),
-                    Text('Password'),
+                    const CustomText(text: 'Password', fontSize: 15),
                     const SizedBox(
                       height: 15,
                     ),
@@ -94,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () {},
                       child: const Text(
                         'Forgot Password',
-                        style: TextStyle(color: Colors.blueAccent),
+                        style: TextStyle(color: Colors.black54),
                       ),
                     ),
                     Row(
