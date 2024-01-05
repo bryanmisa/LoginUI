@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:login_ui/components/custom_elevatedbutton.dart';
 import 'package:login_ui/components/custom_text.dart';
 import 'package:login_ui/components/custom_textfield.dart';
 import 'package:login_ui/constants/constants.dart';
@@ -24,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
@@ -60,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 15,
                     ),
-                    const Text('Email'),
+                    CustomText(text: 'Email', fontSize: 15),
                     const SizedBox(
                       height: 15,
                     ),
@@ -100,19 +101,17 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 30,
-                                  vertical: 15), // Set padding here
-                              backgroundColor: Colors.blueAccent,
-                              foregroundColor: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
+                          child: CustomElevatedButton(
+                            text: 'Sign In',
+                            onPressed: () => print('Button is pressed'),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20.0, vertical: 10.0),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5.0),
                             ),
-                            onPressed: () {},
-                            child: Text('Sign In'),
+                            textStyle: const TextStyle(fontSize: 18.0),
+                            backgroundColor: Colors.blueAccent,
+                            foregroundColor: Colors.white70,
                           ),
                         ),
                       ],
