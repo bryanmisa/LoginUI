@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
     // Navigate to the second screen
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => ForgotPasswordScreen()),
+      MaterialPageRoute(builder: (context) => const ForgotPasswordScreen()),
     );
   }
 
