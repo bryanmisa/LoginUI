@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 enum CustomFontWeight {
   light,
@@ -35,10 +36,12 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(
-        fontSize: fontSize,
-        fontWeight: _getFontWeight(),
-        color: color,
+      style: GoogleFonts.lato(
+        textStyle: TextStyle(
+          fontSize: fontSize,
+          fontWeight: _getFontWeight(),
+          color: color,
+        ),
       ),
     );
   }

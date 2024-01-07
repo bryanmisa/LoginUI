@@ -4,6 +4,7 @@ import 'package:login_ui/components/custom_elevatedbutton.dart';
 import 'package:login_ui/components/custom_text.dart';
 import 'package:login_ui/components/custom_textfield.dart';
 import 'package:login_ui/constants/constants.dart';
+import 'package:login_ui/presentations/screens/forgot_password_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -21,6 +22,15 @@ class _LoginScreenState extends State<LoginScreen> {
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
+  }
+
+  // forgot password function
+  void _onForgotPasswordPressed(BuildContext context) {
+    // Navigate to the second screen
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ForgotPasswordScreen()),
+    );
   }
 
   @override
@@ -93,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             MaterialStateProperty.all(Colors.transparent),
                         padding: MaterialStateProperty.all(EdgeInsets.zero),
                       ),
-                      onPressed: () {},
+                      onPressed: () => _onForgotPasswordPressed(context),
                       child: const Text(
                         'Forgot Password',
                         style: TextStyle(color: Colors.black54),
