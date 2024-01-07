@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.light(),
+        colorScheme: const ColorScheme.light(),
         useMaterial3: true,
       ),
-      home: LoginScreen(),
+      home: const LoginScreen(),
     );
   }
 }
