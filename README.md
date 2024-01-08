@@ -6,4 +6,4 @@ LoginUI
 
 
 
-[[./screenshots/login_screen.png]]
+[./screenshots/login_screen.png]
