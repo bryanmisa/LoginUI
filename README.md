@@ -7,7 +7,7 @@ LoginUI
 
 
 ### Login Screen
-![login_screen.png](screenshots%2Flogin_screen.png)
+![login_screen.png](screenshots%2Flogin_screen.png|width=100)
 
 
 ### Forgot Password Screen
