@@ -36,13 +36,13 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.lato(
-        textStyle: TextStyle(
-          fontSize: fontSize,
-          fontWeight: _getFontWeight(),
-          color: color,
-        ),
+      style: TextStyle(
+        fontFamily: 'Roboto',
+        fontWeight: _getFontWeight(),
+        fontSize: fontSize,
+        color: color,
       ),
+      textAlign: TextAlign.center,
     );
   }
 }
