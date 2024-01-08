@@ -24,11 +24,15 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   }
 
   void _backToLogin(BuildContext context) {
-    // Navigate to the second screen
+    // Navigate to back to login
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const LoginScreen()),
     );
+  }
+
+  void _passwordlinksent(BuildContext context){
+    //
   }
 
   @override
