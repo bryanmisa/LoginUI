@@ -1,11 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:login_ui/components/custom_elevatedbutton.dart';
-import 'package:login_ui/components/custom_text.dart';
-import 'package:login_ui/components/custom_textfield.dart';
-import 'package:login_ui/constants/constants.dart';
-import 'package:login_ui/presentations/screens/login_screen.dart';
-import 'package:login_ui/presentations/screens/password_reset_link.dart';
+import 'package:login_ui/constants/commons.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});
@@ -106,20 +99,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                       ),
                     ],
                   ),
-                  TextButton(
-                    style: ButtonStyle(
-                      overlayColor:
-                          MaterialStateProperty.all(Colors.transparent),
-                      padding: MaterialStateProperty.all(EdgeInsets.zero),
-                    ),
+                  CustomTextButton(
+                    text: 'Back to Login',
                     onPressed: () => _backToLogin(context),
-                    child: const Text(
-                      'Back to Login',
-                      style: TextStyle(
-                          color: Color(0xFF013665),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold),
-                    ),
                   ),
                 ],
               ),

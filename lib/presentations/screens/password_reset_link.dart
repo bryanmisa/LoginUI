@@ -1,10 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:login_ui/components/custom_elevatedbutton.dart';
-import 'package:login_ui/components/custom_text.dart';
-
-import 'package:login_ui/constants/constants.dart';
-import 'login_screen.dart';
+import 'package:login_ui/constants/commons.dart';
 
 class PasswordResetLink extends StatelessWidget {
   const PasswordResetLink({super.key});
@@ -45,7 +39,7 @@ class PasswordResetLink extends StatelessWidget {
               ),
               const CustomText(
                 text:
-                    'Click on the link sent to your email to reset your password ',
+                    'Click on the link sent to your email to reset your password',
                 fontSize: 17,
                 fontWeight: CustomFontWeight.normal,
                 color: Colors.grey,

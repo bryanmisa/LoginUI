@@ -1,10 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:login_ui/components/custom_elevatedbutton.dart';
-import 'package:login_ui/components/custom_text.dart';
-import 'package:login_ui/components/custom_textfield.dart';
-import 'package:login_ui/constants/constants.dart';
-import 'package:login_ui/presentations/screens/forgot_password_screen.dart';
+import 'package:login_ui/constants/commons.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -49,8 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       SizedBox(
-                        width: 200,
-                        height: 200,
+                        width: 300,
                         child: SvgPicture.asset(
                           LoginUIConstants.logoImage,
                           fit: BoxFit.contain,
@@ -102,21 +95,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       const SizedBox(
                         height: 15,
                       ),
-                      TextButton(
-                        style: ButtonStyle(
-                          overlayColor:
-                              MaterialStateProperty.all(Colors.transparent),
-                          padding: MaterialStateProperty.all(EdgeInsets.zero),
-                        ),
-                        onPressed: () => _onForgotPasswordPressed(context),
-                        child: const Text(
-                          'Forgot Password',
-                          style: TextStyle(
-                              color: Color(0xFF013665),
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
+                      CustomTextButton(
+                          text: 'Forgot password',
+                          onPressed: () => _onForgotPasswordPressed(context)),
                       SizedBox(
                         width: double.infinity,
                         child: CustomElevatedButton(
