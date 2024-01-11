@@ -38,76 +38,53 @@ class _LoginScreenState extends State<LoginScreen> {
             child: SizedBox(
               width: double.infinity,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        width: 300,
-                        child: SvgPicture.asset(
-                          LoginUIConstants.logoImage,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                      const CustomText(
-                        text: 'Login to your account',
-                        fontSize: 30.0,
-                        fontWeight: CustomFontWeight.bold,
-                        color: Colors.black87,
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const CustomText(
-                        text: 'Welcome Back! Please enter your details.',
-                        fontSize: 18,
-                        color: Colors.grey,
-                      ),
-                    ],
+                  const Align(
+                    alignment: Alignment.center,
+                    child: Header(
+                      title: 'Login to your account',
+                      subTitle: 'Welcome Back! Please enter your details.',
+                    ),
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const CustomText(text: 'Email', fontSize: 15),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      TextFieldWidget(
-                        textEditingController: _emailController,
-                        labelText: 'Enter your email',
-                        isPassword: false,
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const CustomText(text: 'Password', fontSize: 15),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      TextFieldWidget(
-                        textEditingController: _passwordController,
-                        labelText: 'Password',
-                        isPassword: true,
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      CustomTextButton(
-                          text: 'Forgot password',
-                          onPressed: () => _onForgotPasswordPressed(context)),
-                      SizedBox(
-                        width: double.infinity,
-                        child: CustomElevatedButton(
-                          fontSize: 20,
-                          text: 'Sign in',
-                          onPressed: () => print('Button is pressed'),
-                        ),
-                      )
-                    ],
+                  const SizedBox(
+                    height: 15,
                   ),
+                  const CustomText(text: 'Email', fontSize: 15),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  TextFieldWidget(
+                    textEditingController: _emailController,
+                    labelText: 'Enter your email',
+                    isPassword: false,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const CustomText(text: 'Password', fontSize: 15),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  TextFieldWidget(
+                    textEditingController: _passwordController,
+                    labelText: 'Password',
+                    isPassword: true,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  CustomTextButton(
+                      text: 'Forgot password',
+                      onPressed: () => _onForgotPasswordPressed(context)),
+                  SizedBox(
+                    width: double.infinity,
+                    child: CustomElevatedButton(
+                      fontSize: 20,
+                      text: 'Sign in',
+                      onPressed: () => print('Button is pressed'),
+                    ),
+                  )
                 ],
               ),
             ),

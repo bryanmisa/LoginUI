@@ -30,7 +30,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const PasswordResetLink(),
+        builder: (context) => const PasswordResetSentScreen(),
       ),
     );
   }
@@ -45,39 +45,17 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
             child: SizedBox(
               child: Column(
                 children: [
+                  const Header(
+                      title: 'Password Recovery', subTitle: 'Enter your email'),
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        width: 200,
-                        height: 200,
-                        child: SvgPicture.asset(
-                          LoginUIConstants.logoImage,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                      const CustomText(
-                        text: 'Password Recovery',
-                        fontSize: 30,
-                        fontWeight: CustomFontWeight.bold,
-                        color: Colors.black87,
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const CustomText(
-                          text:
-                              "Enter the email you're using for the your account",
-                          fontSize: 15),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(
                         height: 15,
                       ),
-                      const CustomText(text: 'Email', fontSize: 15),
+                      const Align(
+                        alignment: Alignment.bottomLeft,
+                        child: const CustomText(text: 'Email', fontSize: 15),
+                      ),
                       const SizedBox(
                         height: 15,
                       ),
@@ -97,11 +75,11 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                           fontSize: 15,
                         ),
                       ),
+                      CustomTextButton(
+                        text: 'Back to Login',
+                        onPressed: () => _backToLogin(context),
+                      ),
                     ],
-                  ),
-                  CustomTextButton(
-                    text: 'Back to Login',
-                    onPressed: () => _backToLogin(context),
                   ),
                 ],
               ),

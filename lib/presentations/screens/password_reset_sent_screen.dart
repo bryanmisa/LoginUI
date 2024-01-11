@@ -1,13 +1,21 @@
 import 'package:login_ui/constants/commons.dart';
+import 'package:login_ui/presentations/screens/password_reset_screen.dart';
 
-class PasswordResetLink extends StatelessWidget {
-  const PasswordResetLink({super.key});
+class PasswordResetSentScreen extends StatelessWidget {
+  const PasswordResetSentScreen({super.key});
 
   void _backToLogin(BuildContext context) {
     // Navigate to back to login page
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const LoginScreen()),
+    );
+  }
+
+  void _passwordReset(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const PasswordResetScreen()),
     );
   }
 
@@ -54,7 +62,11 @@ class PasswordResetLink extends StatelessWidget {
                   text: 'Back to Login',
                   fontSize: 20,
                 ),
-              )
+              ),
+              CustomTextButton(
+                text: 'Password Reset Screen',
+                onPressed: () => _passwordReset(context),
+              ),
             ],
           ),
         ),
