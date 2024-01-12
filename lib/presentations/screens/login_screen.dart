@@ -30,65 +30,57 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: SafeArea(
-          child: SingleChildScrollView(
-            child: SizedBox(
-              width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Align(
-                    alignment: Alignment.center,
-                    child: Header(
-                      title: 'Login to your account',
-                      subTitle: 'Welcome Back! Please enter your details.',
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  const CustomText(text: 'Email', fontSize: 15),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  TextFieldWidget(
-                    textEditingController: _emailController,
-                    labelText: 'Enter your email',
-                    isPassword: false,
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  const CustomText(text: 'Password', fontSize: 15),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  TextFieldWidget(
-                    textEditingController: _passwordController,
-                    labelText: 'Password',
-                    isPassword: true,
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  CustomTextButton(
-                      text: 'Forgot password',
-                      onPressed: () => _onForgotPasswordPressed(context)),
-                  SizedBox(
-                    width: double.infinity,
-                    child: CustomElevatedButton(
-                      fontSize: 20,
-                      text: 'Sign in',
-                      onPressed: () => print('Button is pressed'),
-                    ),
-                  )
-                ],
+    return CustomScaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Align(
+              alignment: Alignment.center,
+              child: Header(
+                title: 'Login to your account',
+                subTitle: 'Welcome Back! Please enter your details.',
               ),
             ),
-          ),
+            const SizedBox(
+              height: 15,
+            ),
+            const CustomText(text: 'Email', fontSize: 15),
+            const SizedBox(
+              height: 15,
+            ),
+            CustomTextFieldWidget(
+              textEditingController: _emailController,
+              labelText: 'Enter your email',
+              isPassword: false,
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            const CustomText(text: 'Password', fontSize: 15),
+            const SizedBox(
+              height: 15,
+            ),
+            CustomTextFieldWidget(
+              textEditingController: _passwordController,
+              labelText: 'Password',
+              isPassword: true,
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            CustomTextButton(
+                text: 'Forgot password',
+                onPressed: () => _onForgotPasswordPressed(context)),
+            SizedBox(
+              width: double.infinity,
+              child: CustomElevatedButton(
+                fontSize: 20,
+                text: 'Sign in',
+                onPressed: () => print('Button is pressed'),
+              ),
+            )
+          ],
         ),
       ),
     );

@@ -1,11 +1,11 @@
 import 'package:login_ui/constants/commons.dart';
 
-class TextFieldWidget extends StatefulWidget {
+class CustomTextFieldWidget extends StatefulWidget {
   final TextEditingController textEditingController;
   final String labelText;
   final bool isPassword;
 
-  const TextFieldWidget({
+  const CustomTextFieldWidget({
     super.key,
     required this.textEditingController,
     required this.labelText,
@@ -13,10 +13,10 @@ class TextFieldWidget extends StatefulWidget {
   });
 
   @override
-  State<TextFieldWidget> createState() => _TextFieldWidgetState();
+  State<CustomTextFieldWidget> createState() => _CustomTextFieldWidgetState();
 }
 
-class _TextFieldWidgetState extends State<TextFieldWidget> {
+class _CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
   bool obscureText = true;
 
   @override
