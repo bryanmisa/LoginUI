@@ -59,6 +59,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   textEditingController: _emailController,
                   labelText: 'Enter your email',
                   isPassword: false,
+                  hasInfo: false,
                 ),
                 const SizedBox(
                   height: 15,

@@ -53,6 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
               textEditingController: _emailController,
               labelText: 'Enter your email',
               isPassword: false,
+              hasInfo: false,
             ),
             const SizedBox(
               height: 15,
@@ -65,6 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
               textEditingController: _passwordController,
               labelText: 'Password',
               isPassword: true,
+              hasInfo: false,
             ),
             const SizedBox(
               height: 15,
