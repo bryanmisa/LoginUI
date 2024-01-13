@@ -17,7 +17,7 @@ class CustomScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: hasDrawer ? Drawer() : null,
+      drawer: hasDrawer ? const Drawer() : null,
       appBar: hasAppbar
           ? AppBar(
               actions: const [

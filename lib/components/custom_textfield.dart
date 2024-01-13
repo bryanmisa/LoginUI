@@ -1,4 +1,3 @@
-import 'package:login_ui/components/password_info_suffix.dart';
 import 'package:login_ui/constants/commons.dart';
 
 class CustomTextFieldWidget extends StatefulWidget {

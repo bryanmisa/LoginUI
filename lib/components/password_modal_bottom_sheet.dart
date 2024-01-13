@@ -6,8 +6,8 @@ class PasswordModalBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(0),
-      margin: EdgeInsets.all(5),
+      padding: const EdgeInsets.all(0),
+      margin: const EdgeInsets.all(5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
