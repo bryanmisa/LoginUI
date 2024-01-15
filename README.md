@@ -8,7 +8,9 @@ LoginUI
 
 ## todo 
 - [x] Create widget for TextButton
-- [ ] Custom place holder for the logo and also the text headings
+- [x] Custom place holder for the logo and also the text headings
+- [ ] Create the profile login screen
+- [ ] Create Signout Screen
 
 ### Login Screen
 ![login_screen.png](screenshots%2Flogin_screen.png)
