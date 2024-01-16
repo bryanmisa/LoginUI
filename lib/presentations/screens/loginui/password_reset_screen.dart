@@ -1,4 +1,5 @@
 import 'package:login_ui/constants/commons.dart';
+import 'package:login_ui/presentations/screens/loginui/password_changed_screen.dart';
 
 class PasswordResetScreen extends StatefulWidget {
   const PasswordResetScreen({super.key});
@@ -18,6 +19,14 @@ class _PasswordResetScreenState extends State<PasswordResetScreen> {
     _newPasswordController.dispose();
     _confirmPasswordController.dispose();
     super.dispose();
+  }
+
+  void _changePassword(BuildContext context) {
+    // Navigate to back to login page
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const PasswordChangedScreen()),
+    );
   }
 
   @override
@@ -72,6 +81,17 @@ class _PasswordResetScreenState extends State<PasswordResetScreen> {
                 labelText: '1234578',
                 isPassword: true,
                 hasInfo: true,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: CustomElevatedButton(
+                  onPressed: () => _changePassword(context),
+                  text: 'Login',
+                  fontSize: 20,
+                ),
               ),
             ],
           ),

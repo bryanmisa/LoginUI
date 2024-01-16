@@ -18,6 +18,8 @@ export 'package:login_ui/components/password_modal_bottom_sheet.dart';
 export 'package:login_ui/constants/constants.dart';
 
 // Screens
-export 'package:login_ui/presentations/screens/login_screen.dart';
-export 'package:login_ui/presentations/screens/password_reset_sent_screen.dart';
-export 'package:login_ui/presentations/screens/forgot_password_screen.dart';
+export 'package:login_ui/presentations/screens/loginui/login_screen.dart';
+export 'package:login_ui/presentations/screens/loginui/password_reset_sent_screen.dart';
+export 'package:login_ui/presentations/screens/loginui/forgot_password_screen.dart';
+import 'package:login_ui/presentations/screens/loginui/password_reset_screen.dart';
+import 'package:login_ui/presentations/screens/loginui/password_changed_screen.dart';

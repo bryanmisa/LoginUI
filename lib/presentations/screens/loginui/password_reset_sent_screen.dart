@@ -1,5 +1,5 @@
 import 'package:login_ui/constants/commons.dart';
-import 'package:login_ui/presentations/screens/password_reset_screen.dart';
+import 'package:login_ui/presentations/screens/loginui/password_reset_screen.dart';
 
 class PasswordResetSentScreen extends StatelessWidget {
   const PasswordResetSentScreen({super.key});

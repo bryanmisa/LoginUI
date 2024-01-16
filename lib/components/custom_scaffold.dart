@@ -5,6 +5,7 @@ class CustomScaffold extends StatelessWidget {
   final bool hasDrawer;
   final bool hasAppbar;
   final String title;
+  final Widget? bottomNavigationBar;
 
   const CustomScaffold({
     super.key,
@@ -12,6 +13,7 @@ class CustomScaffold extends StatelessWidget {
     this.hasDrawer = false,
     this.hasAppbar = false,
     this.title = '',
+    this.bottomNavigationBar,
   });
 
   @override

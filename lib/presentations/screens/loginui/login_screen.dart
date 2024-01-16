@@ -1,4 +1,5 @@
 import 'package:login_ui/constants/commons.dart';
+import 'package:login_ui/presentations/screens/profile_ui/profile_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -25,6 +26,16 @@ class _LoginScreenState extends State<LoginScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const ForgotPasswordScreen()),
+    );
+  }
+
+  void _profileLogin(BuildContext context) {
+    // Navigate to the second screen
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const ProfileScreen(),
+      ),
     );
   }
 
@@ -79,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: CustomElevatedButton(
                 fontSize: 20,
                 text: 'Sign in',
-                onPressed: () => print('Button is pressed'),
+                onPressed: () => _profileLogin(context),
               ),
             )
           ],
