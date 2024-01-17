@@ -1,4 +1,5 @@
 import 'package:login_ui/constants/commons.dart';
+import 'package:login_ui/presentations/screens/profile_ui/myrequest_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -13,7 +14,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   // Define your pages or sections here
   final List<Widget> _pages = [
     PageOne(),
-    PageTwo(),
+    MyRequestScreen(),
     PageThree(),
     PageFour(),
   ];
@@ -27,29 +28,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(
+      bottomNavigationBar: TitledBottomNavigationBar(
+        items: [
+          TitledNavigationBarItem(
             icon: Icon(Icons.home_rounded),
-            label: 'Home',
+            title: Text('Home'),
           ),
-          BottomNavigationBarItem(
+          TitledNavigationBarItem(
             icon: Icon(Icons.edit_document),
-            label: 'My Requests',
+            title: Text('My Request'),
           ),
-          BottomNavigationBarItem(
+          TitledNavigationBarItem(
             icon: Icon(Icons.notification_add_outlined),
-            label: 'Notifications',
+            title: Text('Notifications'),
           ),
-          BottomNavigationBarItem(
+          TitledNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Profile',
+            title: Text('Profile'),
           ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        selectedItemColor: Colors.blueAccent,
+        indicatorColor: Colors.blue,
+        activeColor: Colors.blue,
+        reverse: true,
       ),
       body: _pages[_selectedIndex],
     );

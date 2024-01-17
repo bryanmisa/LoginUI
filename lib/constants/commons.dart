@@ -1,8 +1,9 @@
 // material.dart
 export 'package:flutter/material.dart';
 
-// Flutter SVG
+// Third Party Packages
 export 'package:flutter_svg/flutter_svg.dart';
+export 'package:titled_navigation_bar/titled_navigation_bar.dart';
 
 // Custom Components
 export 'package:login_ui/components/custom_elevatedbutton.dart';
