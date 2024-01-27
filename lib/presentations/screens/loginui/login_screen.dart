@@ -1,5 +1,5 @@
 import 'package:login_ui/constants/commons.dart';
-import 'package:login_ui/presentations/screens/profile_ui/profile_screen.dart';
+import 'package:login_ui/presentations/screens/profile_ui/login_main_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -34,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const ProfileScreen(),
+        builder: (context) => const LoginMainScreen(),
       ),
     );
   }

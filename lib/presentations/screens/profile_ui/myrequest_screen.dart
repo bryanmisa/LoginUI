@@ -5,9 +5,12 @@ class MyRequestScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
-        body: Column(
-      children: [Text('My Request Screen')],
-    ));
+    return const CustomScaffold(
+      hasAppbar: true,
+      title: 'Text App',
+      body: Column(
+        children: [Text('My Request Screen')],
+      ),
+    );
   }
 }

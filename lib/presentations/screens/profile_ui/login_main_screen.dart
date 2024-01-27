@@ -1,14 +1,13 @@
 import 'package:login_ui/constants/commons.dart';
-import 'package:login_ui/presentations/screens/profile_ui/myrequest_screen.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({super.key});
+class LoginMainScreen extends StatefulWidget {
+  const LoginMainScreen({super.key});
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<LoginMainScreen> createState() => _LoginMainScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _LoginMainScreenState extends State<LoginMainScreen> {
   int _selectedIndex = 0;
 
   // Define your pages or sections here
@@ -43,7 +42,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             title: Text('Notifications'),
           ),
           TitledNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: const Icon(Icons.person),
             title: Text('Profile'),
           ),
         ],
